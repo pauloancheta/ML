@@ -1,0 +1,9 @@
+# install with pip install -r py_requirements.txt
+
+numpy
+matplotlib
+pandas
+matplotlib_iterm2
+
+sklearn
+scipy
