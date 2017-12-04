@@ -7,7 +7,7 @@ from sklearn.cross_validation import train_test_split
 from sklearn.preprocessing import StandardScaler
 
 # import dataset
-dataset = pd.read_csv('../Data_Preprocessing/Data.csv')
+dataset = pd.read_csv('Data.csv')
 X = dataset.iloc[:, :-1].values
 y = dataset.iloc[:, 3].values
 

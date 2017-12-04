@@ -12,7 +12,7 @@
 # install.packages("caTools")
 library("caTools")
 
-dataset = read.csv("../Data_Preprocessing/Data.csv")
+dataset = read.csv("Data.csv")
 
 # TAKE CARE OF MISSING DATA
 dataset$Age = ifelse(is.na(dataset$Age),
