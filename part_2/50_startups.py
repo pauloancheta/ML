@@ -1,15 +1,13 @@
 # Data Preprocessing
-import warnings
+
 # Importing the libraries
 import matplotlib.pyplot as plt
 import pandas as pd
-from sklearn.model_selection import train_test_split
+from sklearn.cross_validation import train_test_split
 from sklearn.linear_model import LinearRegression
 
-warnings.filterwarnings(action="ignore", module="scipy", message="^internal gelsd")
-
 # Importing the dataset
-dataset = pd.read_csv('Salary_Data.csv')
+dataset = pd.read_csv('50_Startups.csv')
 X = dataset.iloc[:, :-1].values
 y = dataset.iloc[:, 1].values
 
@@ -22,6 +20,11 @@ regressor.fit(X_train, y_train)
 
 # Predictions
 y_pred = regressor.predict(X_test)
+
+print("y_test")
+print(y_test)
+print("y_pred")
+print(y_pred)
 
 plt.scatter(X_train, y_train, color="red")
 plt.plot(X_train, regressor.predict(X_train), color="yellow")
